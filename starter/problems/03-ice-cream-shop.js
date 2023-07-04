@@ -14,6 +14,14 @@ iceCreamShop([], 'honey lavender'); // false
 
 
 // your code here
+const iceCreamShop = (array, flavor, i = 0) => {
+    if (flavor === array[i]) {
+        return true;
+    } else if (i >= array.length-1) {
+        return false;
+    }
+        return false || iceCreamShop(array, flavor, i+1);
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
