@@ -13,6 +13,17 @@ addToTwelve([1]); // false
 ***********************************************************************/
 
 // your code here
+// TODO fix infinte recursion
+const addToTwelve = (array, i = 1) => {
+    if ( array[i] + array[0] === 12) {
+        return true;
+    } else if (array.length <= 1) {
+        return false;
+    } else if (i < array.length) {
+        return false || addToTwelve(array, i+1);
+    }
+    return false || addToTwelve(array.slice(1));
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
